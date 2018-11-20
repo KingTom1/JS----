@@ -1,0 +1,21 @@
+<iframe id="a" src="https://www.baidu.com/"  scrolling="no" width="95%" height="95%" frameborder="0"></iframe>
+<script>
+    window.onload = function(){ 
+    	
+    	var num = 1;
+    	var url1 = "https://www.baidu.com/";
+    	var url2 = "http://www.mydrivers.com/";
+ 	setInterval(function(){
+	
+	if(num%2==0){
+  		document.getElementById("a").src=url1;
+
+  	}else{
+  		document.getElementById("a").src=url2;
+
+  	}
+  	num++;
+	},5000);
+	
+}
+</script>

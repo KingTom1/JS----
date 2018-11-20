@@ -1,0 +1,33 @@
+<iframe id="a" src="https://www.baidu.com/"  scrolling="no" width="95%" height="95%" frameborder="0"></iframe>
+<script>
+    window.onload = function(){ 
+    	
+    	var num = 1;
+    	var url1 = "https://www.baidu.com/";
+    	var url2 = "http://www.mydrivers.com/";
+    	var time = 1000;
+ 	var id1 = setInterval(fn,time);
+	function fn(){
+		if(num%2==0){
+	  		document.getElementById("a").src=url1;
+	  		if(time==8000){
+	  			clearInterval(id1);
+	  			time = 1000;
+	  			id1 = setInterval(fn,time);
+
+	  		}
+	  
+	  	}else{
+	  		document.getElementById("a").src=url2;
+	  		if(time==1000){
+	  			clearInterval(id1);
+	  			time = 8000;
+	  			id1 = setInterval(fn,time);
+
+	  		}
+
+	  	}
+	  	num++;
+	}
+}
+</script>
